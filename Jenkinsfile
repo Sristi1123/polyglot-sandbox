@@ -36,7 +36,7 @@ pipeline {
             steps {
                 sh '''
                     npx sonar-scanner \
-                        -Dsonar.projectKey=sristi1123_polyglot-sandbox \
+                        -Dsonar.projectKey=Sristi1123_polyglot-sandbox \
                         -Dsonar.organization=sristi1123 \
                         -Dsonar.host.url=https://sonarcloud.io \
                         -Dsonar.token=${SONAR_TOKEN}
@@ -49,7 +49,7 @@ pipeline {
                 sh '''
                     sleep 30
                     STATUS=$(curl -s -u ${SONAR_TOKEN}: \
-                        "https://sonarcloud.io/api/qualitygates/project_status?projectKey=sristi1123_polyglot-sandbox" \
+                        "https://sonarcloud.io/api/qualitygates/project_status?projectKey=Sristi1123_polyglot-sandbox" \
                         | grep -o '"status":"[^"]*"' | head -1 | cut -d'"' -f4)
                     echo "Quality Gate Status: $STATUS"
                     if [ "$STATUS" != "OK" ]; then
