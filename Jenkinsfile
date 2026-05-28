@@ -20,7 +20,7 @@ pipeline {
         stage('Install Dependencies') {
             steps {
                 sh '''
-                    npm config set registry ${NEXUS_URL}/repository/npm-proxy/
+                    
                     npm install
                 '''
             }
