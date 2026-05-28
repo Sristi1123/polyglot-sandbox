@@ -37,7 +37,7 @@ pipeline {
                 sh '''
                     npx sonar-scanner \
                         -Dsonar.projectKey=Sristi1123_polyglot-sandbox \
-                        -Dsonar.organization=Sristi1123 \
+                        -Dsonar.organization=sristi1123 \
                         -Dsonar.host.url=https://sonarcloud.io \
                         -Dsonar.token=${SONAR_TOKEN}
                 '''
