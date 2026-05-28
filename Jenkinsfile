@@ -3,7 +3,7 @@ pipeline {
     
     environment {
         DOCKER_HUB_CREDS = credentials('dockerhub-creds')
-        DOCKER_IMAGE = 'sristi1123/polyglot-sandbox'
+        DOCKER_IMAGE = 'sristi1/polyglot-sandbox'
         EC2_IP = '35.154.206.217'
         SONAR_TOKEN = 'af3dadecabad93d73742b78f437a2c47c7133733'
         NEXUS_URL = 'http://35.154.206.217:8081'
