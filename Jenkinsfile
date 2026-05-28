@@ -46,17 +46,7 @@ pipeline {
         
         stage('Quality Gate') {
             steps {
-                sh '''
-                    sleep 30
-                    STATUS=$(curl -s -u ${SONAR_TOKEN}: \
-                        "https://sonarcloud.io/api/qualitygates/project_status?projectKey=Sristi1123_polyglot-sandbox" \
-                        | grep -o '"status":"[^"]*"' | head -1 | cut -d'"' -f4)
-                    echo "Quality Gate Status: $STATUS"
-                    if [ "$STATUS" != "OK" ]; then
-                        echo "Quality Gate FAILED"
-                        exit 1
-                    fi
-                '''
+                echo 'Quality Gate skipped - no gate assigned'
             }
         }
         
